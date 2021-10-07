@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const qr = require('qrcode');
 
 const app = express();
-const PORT = 443;
+const PORT = 3000;
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({
@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-app.get("/generate", (req, res) => {
+app.get("/", (req, res) => {
     const url = req.query.data;
 
     if(!url) {
