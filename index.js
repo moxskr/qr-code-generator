@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const qr = require('qrcode');
 
 const app = express();
-const PORT = 5000;
+const PORT = 443;
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({
